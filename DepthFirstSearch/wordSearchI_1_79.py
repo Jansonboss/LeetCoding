@@ -31,23 +31,26 @@ def dfs(results, subset, board, word, x, y, idx, dx, dy, visited):
 	if idx == len(word) - 1:
 		return True
 
-	temp = visited[x][y]
-	visited[x][y] = temp
+	# temp = visited[x][y]
+	# visited[x][y] = temp
 	
 	for n in range(len(dx)):
 		_x = x + dx[n]
 		_y = y + dy[n]
-		
+
+		temp = visited[x][y]
+		visited[x][y] = temp
+
 		if (inbound(board, _x, _y)) and (not visited[_x][_y]):
 			if dfs(results, subset, board, word, _x, _y, idx + 1, dx, dy, visited):
 				return True
 	
-	visited[x][y] = temp
+		visited[x][y] = temp
 	return False
 
 
 if __name__ == "__main__":
-
+	print("hello")
 	VALID_ANSWER = ["REA","TEA","EAT","ARM", "KIT", "FEAR"]
 	INVALID_ANSWER = ["APPLE", "SIRI", "FOEAK"]
 

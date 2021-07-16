@@ -23,9 +23,8 @@ def dfs(results, subset, x, y, board, visited, dx, dy):
 	if len(subset) == 8: 
 		return
 	
-	temp = visited[x][y]
 	visited[x][y] = 1 # no revisit
-	subset.append(temp)
+	subset.append(board[x][y])
 
 	if len(subset) >= 3:
 		results.add("".join(subset))
@@ -36,7 +35,7 @@ def dfs(results, subset, x, y, board, visited, dx, dy):
 		if (inbound(board, _x, _y)) and (not visited[_x][_y]):
 			dfs(results, subset, _x, _y, board, visited, dx, dy)
 
-	visited[x][y] = temp
+	visited[x][y] = 0
 	subset.pop() # backtracking
 
 
