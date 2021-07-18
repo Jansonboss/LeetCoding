@@ -7,7 +7,8 @@ def combinnationSum(nums, target):
 	# and controll the duplicated or not
 	# don't use visited array to do that
 	if (not nums) or (not target): return []
-
+	
+	nums = sorted(set(nums))
 	results, subset, startIdx = [], [], 0
 	_dfs(nums, results, target, startIdx, subset)
 	return results
