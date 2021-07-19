@@ -5,6 +5,7 @@
 # we don't need depth_startIdx since we need to do permutation and 
 # for each depth level, we need to start from index = 0 so we need visited array
 
+# video link: https://github.com/Jansonboss/LeetCoding/issues/3
 def permutation2(nums): 
 	if not nums: return []
 
