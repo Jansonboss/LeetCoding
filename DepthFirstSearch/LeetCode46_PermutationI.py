@@ -10,15 +10,22 @@ def permutate1(nums):
 	return results
 
 def _dfs(nums, idx, results, subset, visited):
-
 	
 	if idx == len(nums): # stop recursion 
+		# we can also use 
 		# since python pass by reference
 		# we need copy the subset
 		results.append(subset[:]) 
 		return
 
 	# think it as a graph, traverse its neighbor
+	# the reason why we need visited array in permutations
+	# is that we every time we call the _dfs() funciton, 
+	# we search from the idx 0 so there might be some values
+	# is being visited
+
+	# for combination and subset we don't need visited array since we use
+	# idx and i to make sure they don't have the same value 
 	for i in range(0,len(nums)):
 		if (visited[i]):
 			continue
