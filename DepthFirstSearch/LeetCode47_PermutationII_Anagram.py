@@ -31,11 +31,13 @@ def _dfs2(nums, results, subset, depth_startIdx, visited):
 		# (if include this, remove everything after or)
 
 		if ((nums[i] == nums[i-1]) and (not visited[i-1])) or (visited[i]):
+			# if current char is equal to previous char
+			# and previous char is being skipped
 			continue	
 
 		visited[i] = 1
 		subset.append(nums[i])
-		_dfs2(nums, results, subset, i+1, visited)
+		_dfs2(nums, results, subset, i+1, visited) # i+1 here does not matter, depth_startIdx no used
 		visited[i] = 0
 		subset.pop()
 
