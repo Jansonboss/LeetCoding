@@ -49,3 +49,21 @@ def _dfs(digits, results, subset, depth_startIdx, keyboard):
 if __name__ == "__main__":
 	print(LetterCombination("23"), "\n")
 	print(LetterCombination("234"))
+
+
+
+
+
+
+# KEYBOARD = {
+# 	"2": "abc",
+# 	"3": "def",
+# 	"4": "ghi",
+# 	"5": "jki",
+# 	"6": "mno",
+# 	"7": "pqrs",
+# 	"8": "tuv",
+# 	"9": "wxyz"
+# }
+# 如果又一个dictionary要求组成的单词都是dictionary里面的
+# 求如何优化？用trie (prefix tree)
