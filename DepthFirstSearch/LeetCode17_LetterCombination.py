@@ -48,21 +48,4 @@ def _dfs(digits, results, subset, depth_startIdx, keyboard):
 	
 if __name__ == "__main__":
 	print(LetterCombination("23"))
-
-
-
-
-
-
-
-if __name__ == "__main__":
-	KEYBOARD = {
-		"2": "abc",
-		"3": "def",
-		"4": "ghi",
-		"5": "jki",
-		"6": "mno",
-		"7": "pqrs",
-		"8": "tuv",
-		"9": "wxyz"
-	}
+	print(LetterCombination("234"))
