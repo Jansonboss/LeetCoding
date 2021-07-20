@@ -38,7 +38,7 @@ def LetterCombination(digits):
 def _dfs(digits, results, subset, depth_startIdx, keyboard):
 	# '234' => 
 	if len(subset) == len(digits):
-		results.append(subset[:])
+		results.append("".join(subset[:]))
 		return
 	
 	for letter in keyboard[digits[depth_startIdx]]:
@@ -47,5 +47,5 @@ def _dfs(digits, results, subset, depth_startIdx, keyboard):
 		subset.pop()
 	
 if __name__ == "__main__":
-	print(LetterCombination("23"))
+	print(LetterCombination("23"), "\n")
 	print(LetterCombination("234"))
