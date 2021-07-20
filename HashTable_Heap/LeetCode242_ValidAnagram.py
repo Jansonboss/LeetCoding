@@ -21,4 +21,3 @@ def isAnagram(s, t):
 		if s_set[k] != t_set.get(k, 0):
 			return False
 	return True
-		
