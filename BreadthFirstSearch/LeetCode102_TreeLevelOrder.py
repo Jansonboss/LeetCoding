@@ -23,8 +23,13 @@
 # 会卡在哪里（多线程） 你也不知道为啥出错不好debug
 # https://learnku.com/docs/pymotw/queue-thread-safe-fifo-queue/3370
 
-# Input: root = [3,9,20,null,null,15,7]
-# Output: [[3],[9,20],[15,7]]
+
+# https://stackoverflow.com/questions/53923064/how-to-deal-with-null-in-python-list-leetcode-104
+# Notice that this is seralized (linear description of tree)
+
+# Input: root = [3,9,20,null,null,15,7] Output: [[3],[9,20],[15,7]]
+# those 2 nulls're left and right child of 9
+# 15 and 7 are left and right child of 20
 
 # def levelOrder(root):
 #    从i层拓展到i+1层 since ele in i+1 must be left and right child of ith, we can for loop it
@@ -71,6 +76,8 @@ if __name__ == "__main__":
 	root.right = TreeNode(val=3)
 	root.right.left = TreeNode(val=4)
 	root.right.right = TreeNode(val=5)
+	# [1, 2, 3, null, null, 4, 5]
+	#
 	#               1
 	#          /        \
 	#        2            3
