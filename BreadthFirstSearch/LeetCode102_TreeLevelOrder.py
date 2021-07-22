@@ -48,7 +48,8 @@ class TreeNode:
 		self.right = right
 	
 def levelOrderTraversal(root):
-
+	# and we actually don't need queue check out serialize part lt297:
+	# https://github.com/Jansonboss/LeetCoding/blob/main/BreadthFirstSearch/LeetCode297_Serialize_Deserialize_BinaryTree.py
 	if not root: return []
 
 	queue, results = deque([root]), []
