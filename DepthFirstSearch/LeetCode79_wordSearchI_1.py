@@ -1,4 +1,7 @@
 # https://leetcode.com/problems/word-search/ 
+# This kind of queston is suitable for DFS since the lenghth of english word
+# is somehow limited which means the depth of the recursion is limited as well
+
 
 def findWord(board, word):
 	"""

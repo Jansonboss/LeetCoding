@@ -1,4 +1,6 @@
 # https://leetcode.com/problems/word-search/ 
+# This kind of queston is suitable for DFS since the lenghth of english word
+# is somehow limited which means the depth of the recursion is limited as well
 
 def findWord(board):
 	"""
@@ -22,9 +24,6 @@ def dfs(results, subset, x, y, board, visited, dx, dy):
 
 	if len(subset) == 8: 
 		return
-	
-	# visited[x][y] = 1 # no revisit
-	# subset.append(board[x][y])
 
 	if len(subset) >= 3:
 		results.add("".join(subset))
