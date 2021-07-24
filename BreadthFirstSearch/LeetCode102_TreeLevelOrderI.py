@@ -59,7 +59,7 @@ def levelOrderTraversal(root):
 		print(len(queue))
 		# 在当前层中去遍历每个变量
 		# 第一层就一个变量，第二层有两个变量 depends on (len(queue)) etc。。
-		for _ in range(len(queue)):
+		for _ in range(len(queue)): # 分层遍历
 			node = queue.popleft() 
 			level.append(node.val)
 			if node.left:

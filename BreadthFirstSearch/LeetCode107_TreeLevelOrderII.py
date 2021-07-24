@@ -1,5 +1,22 @@
 # https://leetcode.com/problems/binary-tree-level-order-traversal-ii/
+# same thing with level order traversal 1 just use queue for results
+# and append to the left
 
+
+# https://stackoverflow.com/questions/53923064/how-to-deal-with-null-in-python-list-leetcode-104
+# Notice that this is seralized (linear description of tree)
+
+# Input: root = [3,9,20,null,null,15,7] Output: [[3],[9,20],[15,7]]
+# those 2 nulls're left and right child of 9
+# 15 and 7 are left and right child of 20
+
+# [1, 2, 3, null, null, 4, 5]
+#
+#               1
+#          /        \
+#        2           3
+#     /    \      /     \ 
+#  null   null   4       5
 
 class TreeNode:
 
