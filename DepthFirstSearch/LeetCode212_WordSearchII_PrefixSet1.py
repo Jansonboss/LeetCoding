@@ -1,7 +1,11 @@
 # the standard way is to usef dfs + trie
 # here we can also use hashmap (prefix set) to stop
 # as long as current search char in not in the prefixt set
-# This is exactly the same logic of prefix tree
+# This is exactly the same logic of prefic tree
+
+# This is exactly the same with WordSearch2 prefix, on;y difference is that
+# we need change the value of board and recover it back when backtracing rather than using visited array
+
 def wordSearch2(board, words):
 
 	if (not board) or (not words): return []
@@ -15,7 +19,6 @@ def wordSearch2(board, words):
 	for word in words:
 		for i in range(len(word)):
 			prefix_set.add(word[:i+1])
-	print(prefix_set)
 	# hash map words array as well since we need to frequently check
 	word_set = set(words)
 
@@ -39,11 +42,9 @@ def _dfs(board, x, y, visited, results, subset, prefix_set, word_set):
 	# don't forget initilize the subset with board[i][j] are first
 	# otherwise uf subset is an empty list, it cannot pass the filter downbelow
 	if "".join(subset) not in prefix_set:
-		print("triggered")
 		return
 
 	if "".join(subset) in word_set:
-		print(subset)
 		results.append("".join(subset))
 		# don't return since there might be some words are prefix of another
 		# eg. [eat, eater] if return we gonna just stop at eat and only found eat 
@@ -52,16 +53,20 @@ def _dfs(board, x, y, visited, results, subset, prefix_set, word_set):
 	dy = [ 0, 0, -1, 1]
 
 	for n in range(len(dx)):
-		x_, y_ = x + dx[n], y + dy[n]									
+		x_, y_ = x + dx[n], y + dy[n]			
 
-		if not inbound(board, x_, y_):
-			continue
+		if not inbound(board, x_, y_): continue
 
-		if visited[x_][y_]:
-			continue
+		# if visited[x_][y_]:
+			# continue
+		char = board[x_][y_]
 		
-		subset.append(board[x_][y_])
-		visited[x_][y_] = 1
+		if board[x_][y_] == "#": continue
+		
+		# visited[x_][y_] = 1
+		subset.append(board[x_][y_]) # be careful don't put board[x_][y_] = "#"aboe this line
+		# otherwise subset will append # into itself
+		board[x_][y_] = "#"
 		_dfs(
 			board,
 			x_,
@@ -73,7 +78,7 @@ def _dfs(board, x, y, visited, results, subset, prefix_set, word_set):
 			word_set
 		)
 
-		visited[x_][y_] = 0 # recover previoud senerio
+		board[x_][y_] = char # recover previoud senerio
 		subset.pop() # backtracking
 
 
