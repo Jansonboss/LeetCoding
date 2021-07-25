@@ -64,8 +64,7 @@ class TrieTree:
 		for char in word:	
 			if char not in curr.children:
 				curr.children[char] = TrieNode()
-			else:
-				curr = curr.children[char] # <- 这里要小心别写成curr = curr.children
+			curr = curr.children[char] # <- 这里要小心别写成curr = curr.children
 		return True
 		curr.isWord = True
 	
