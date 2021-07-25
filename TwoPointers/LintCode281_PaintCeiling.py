@@ -1,0 +1,2 @@
+# https://leetcode.com/discuss/interview-question/892579/paint-the-ceiling-swe-hackerrank-test
+# https://www.google.com/search?q=Lintcode+281&sxsrf=ALeKk005NV0Xg1p2LdNGrn2OvOzfpjw_Zg%3A1627185195550&ei=K-D8YMqHIYT6-gSTo7T4Dg&oq=Lintcode+281&gs_lcp=Cgdnd3Mtd2l6EAMyBAgAEA1KBAhBGAFQ1iVY-ylguitoAXAAeACAAW-IAdYDkgEDNS4xmAEAoAEBqgEHZ3dzLXdpesABAQ&sclient=gws-wiz&ved=0ahUKEwiKycGcqf3xAhUEvZ4KHZMRDe8Q4dUDCA8&uact=5
