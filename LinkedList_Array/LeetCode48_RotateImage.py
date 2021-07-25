@@ -25,16 +25,21 @@ def _flip_in_middle(matrix):
 			#j=1:matrix[0, 4-1-1], matrix[0, 1]
 	return matrix
 
-def _swap_in_row(row):
-	n = len(row)
-	for i in range(n):
-		for j in range(n//2):
-			if i + j == n-1: # index = len - 1
-				row[i] , row[j] = row[j], row[i]
 
+# This one bleow should be more intuitive to me
 def _flip_in_middle_by_row(matrix):
-	for row in matrix:
-		_swap_in_row(row)
+	for i in range(len(matrix)):
+		flip_in_row(matrix[i])
+	
+def flip_in_row(row):
+
+	# [15, 14, 17, 19] => [19, 17, 14, 15]
+	#  0   1   2   3  
+
+	# 0 <-> 3 --> n-i-1
+	n = len(row)
+	for i in range(len(n)//2):
+		row[i] = row[n-i-1]
 
 
 if __name__ == "__main__":
