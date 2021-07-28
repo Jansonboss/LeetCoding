@@ -1,4 +1,6 @@
 # https://leetcode.com/problems/binary-tree-postorder-traversal/
+# http://www.jiuzhang.com/solutions/binary-tree-postorder-traversal/
+
 # 3 ways to postorder traversal the binary tree
 
 
