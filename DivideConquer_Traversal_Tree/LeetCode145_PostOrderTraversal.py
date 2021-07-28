@@ -4,6 +4,12 @@
 # 3 ways to postorder traversal the binary tree
 
 
+# Traverse vs Divide Conquer
+# ○ They are both Recursion Algorithm
+# ○ Result in parameter vs Result in return value
+# ○ Top down vs Bottom up
+
+
 
 # Tree Traversal
 class TreeNode:
