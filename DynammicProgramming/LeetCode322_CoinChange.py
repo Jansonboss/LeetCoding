@@ -43,8 +43,11 @@ def coinChange(coins, amount):
 		for coin in coins:
 			if ((i - coin) < 0):
 				continue
-			# state transform function f(x) = min(f[x-1]+1), f[x-5]+1, f[x-7]+1)
+			# state transform function f(x) = min(f[x-1]+1), f[x-5]+1, f[x-7]+1) 
 			dp[i] = min(dp[i-coin] + 1, dp[i])
+
+			# 或者写成：if ((i - coin) < 0) and (dp[i-coin]+1) < dp[i]:
+			# 			dp[i] = dp[i-coin] + 1
 
 	if dp[-1] == float('inf'): 
 		return -1
