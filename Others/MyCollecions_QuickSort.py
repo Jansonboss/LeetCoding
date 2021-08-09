@@ -1,6 +1,10 @@
 # Two Pointers and Quick select
 # are able to solve Kth largest number
 
+
+# https://www.jiuzhang.com/problem/kth-largest-element/
+
+
 # https://www.youtube.com/watch?v=7h1s2SojIRw&t=1s&ab_channel=AbdulBari
 # We first pick the 0th item in the list as pivot
 # and have i index point to 0th and j index point to len(nums) - 1 position
