@@ -1,5 +1,5 @@
 # https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/
-
+# uses binary search for two times
 def searchRange(nums, target):
 
 
